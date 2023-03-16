@@ -7,7 +7,10 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <div className='bg-[#DAE1E7] '>
+      <App />
+    </div>
+    
   </React.StrictMode>
 );
 
