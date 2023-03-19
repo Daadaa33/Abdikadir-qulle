@@ -15,9 +15,7 @@ function Header() {
     <div className={`flex px-5 justify-between items-center w-[100%] h-[5rem]
      bg-[#1C4B82]`}>
      
-        <div className='text-white'>
-          <Link to ='/About Me'  className='text-2xl font-bold'>Abdikadir qulle</Link>
-        </div>
+       
         {/* navbar */}
         
         <Navbar />
