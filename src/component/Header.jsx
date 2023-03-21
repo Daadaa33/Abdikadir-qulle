@@ -17,8 +17,10 @@ function Header() {
      
        
         {/* navbar */}
-        
-        <Navbar />
+        <div className="w-full">
+          <Navbar />
+
+        </div>
         {/* mobile */}
         <div className='md:hidden hover:cursor-pointer text-white flex items-center  justify-center gap-6 p-6 text-bold'>
 

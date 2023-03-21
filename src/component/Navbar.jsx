@@ -19,34 +19,31 @@ function Navbar() {
  useEffect (() => {}, [updated])
   
   return (
-    <div className='flex items-center justify-between '>
+    <div className='flex items-center justify-between  w-full '>
        <div className='text-white'>
           <Link to ='/About Me'  className={`text-2xl font-bold`}
           onClick={()=> setZaad({...initialPayment, about : true})}
           >Abdikadir qulle</Link>
         </div>
-        <div className={`text-[#FFFFFB] font-bold m-5  hover:rotate-90 duration-700 cursor-pointer hidden md:flex 
-        `} >
-        {
+      
+         <div className={` hidden md:flex space-x-5 hover:cusor-pointer text-[#fff]  `}>
+             {
            age ? (
-             <BsMoonFill onClick={ () => setAge (!age) } className='w-6 h-6' />
+             <BsMoonFill onClick={ () => setAge (!age) } className='w-6 h-6 text-[#FFFFFB] hover:rotate-90 duration-700 cursor-pointer' />
            ): (
-             <BsSun  onClick={ () => setAge (!age) } className='w-6 h-6 hover:rotate-45'/>
+             <BsSun  onClick={ () => setAge (!age) } className='w-6 h-6 text-[#FFFFFB] hover:rotate-90 duration-700 cursor-pointer'/>
  
            )
           }
-        </div>
-         <div className={` hidden md:flex space-x-5 hover:cusor-pointer text-[#fff] font-medium `}>
-             
              <Link to="/About Me" onClick={()=> setZaad({...initialPayment, about : true})}
-             className={` ${zaad.about && 'text-red-400'}`}
+             className={` ${zaad.about && 'font-bold'}`}
              >About Me</Link>
             <Link to="/Projects" onClick={()=> setZaad({...initialPayment, project : true})}
-            className={` ${zaad.project && 'text-red-400'}`}>Projects</Link>
+            className={` ${zaad.project && 'font-bold'}`}>Projects</Link>
             <Link to="/Skills" onClick={()=> setZaad({...initialPayment, skill : true})}
-            className={` ${zaad.skill && 'text-red-400'}`}>Skills</Link>
+            className={` ${zaad.skill && 'font-bold'}`}>Skills</Link>
             <Link  to="/Links" onClick={()=> setZaad({...initialPayment, linka : true})}
-            className={` ${zaad.linka && 'text-red-400'}`}>Links</Link>
+            className={` ${zaad.linka && 'font-bold'}`}>Links</Link>
          </div>
            
     </div>

@@ -28,7 +28,7 @@ function About() {
     {/* abouut */}
     <div className="sm:max-w-lg  w-auto sm:text-center max-w-sm md:max-w-2xl lg:max-w-none space-y-4 text-left md:text-center px-4">
     <div className="flex flex-wrap">
-      <h1 className='selection:bg-red-100'>I am a frontend developer, software engineering student and content creator from somalia based in somalia, kismayo.</h1>
+      <h1 className=' '>I am a frontend developer, software engineering student and content creator from somalia based in somalia, kismayo.</h1>
     </div>
     <div className=" ">
       <h1>In 2019 I was a graphic designer and I wanted to learn a new skill
