@@ -17,11 +17,18 @@ function Links() {
             <BsTwitter className='hover:text-[#D48472]'/>
    </div>
       </div>
-      <div className="flex flex-col text-[#FFFFFC] gap-4 text-center">
-        <a href="#" className='bg-[#DD6B4D] hover:bg-[#1F71CF] py-10'>Earthquake Response<br />(Molham Team)</a>
-        <a href="#" className='bg-[#DD6B4D] hover:bg-[#1F71CF] p-5'>Support The White Helmets</a>
+      <div className="flex flex-col pb-[5rem] text-[#FFFFFC] gap-4 text-center">
         <a href="#" className='bg-[#DD6B4D] hover:bg-[#1F71CF] p-5'>Nuphy Halo65 Keyboard (10% off)</a>
         <a href="#" className='bg-[#1C4B82] p-5 hover:bg-[#1F71CF]'>Cololight light strip</a>
+        <a href="#" className='bg-[#1C4B82] p-5 hover:bg-[#1F71CF]'>Poly Voyager 8200 UC Headsets</a>
+        <a href="#" className='bg-[#1C4B82] p-5 hover:bg-[#1F71CF]'>MacBook Pro 14" M1 pro</a>
+        <a href="#" className='bg-[#1C4B82] p-5 hover:bg-[#1F71CF]'>Moniter</a>
+        <a href="#" className='bg-[#1C4B82] p-5 hover:bg-[#1F71CF]'>Desk</a>
+        <a href="#" className='bg-[#1C4B82] p-5 hover:bg-[#1F71CF]'>Desk mat</a>
+        <a href="#" className='bg-[#1C4B82] p-5 hover:bg-[#1F71CF]'>Writ rest</a>
+        <a href="#" className='bg-[#1C4B82] p-5 hover:bg-[#1F71CF]'>Mouse</a>
+        <a href="#" className='bg-[#1C4B82] p-5 hover:bg-[#1F71CF]'>hard disk</a>
+        <a href="#" className='bg-[#1C4B82] p-5 hover:bg-[#1F71CF]'>Microphone</a>
       </div>
     </div>
   )
