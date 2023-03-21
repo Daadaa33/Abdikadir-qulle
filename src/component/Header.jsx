@@ -13,7 +13,7 @@ function Header() {
     skill : false,
     linka : false
   }
-  const [data, setData] = useState(initialPayment)
+  const [data, setData] = useState(false)
   // const [zaad,setZaad] = useState(initialPayment)
   const [updated, setUpdated] = useState(false)
  
@@ -60,8 +60,7 @@ function Header() {
             <Link to="/About Me" onClick={ () => setData (!data) }>About Me</Link>
             <Link to="/Projects" onClick={ () => setData (!data) }>Projects</Link>
             <Link to="/Skills" onClick={ () => setData (!data) }>Skills</Link>
-            <Link  to="/Links" onClick={()=> setData({...initialPayment, linka : true})} 
-             className={` ${data.linka && 'font-bold'}`}>Links</Link>
+            <Link  to="/Links" onClick={()=> setData (!data) } >Links</Link>
          </div>
         </div>
       
