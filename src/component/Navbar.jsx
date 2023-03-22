@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
 import {BsMoonFill, BsSun} from "react-icons/bs"
-import Header from './Header'
 
 function Navbar() {
   const [age, setAge] = useState(false)
@@ -13,6 +12,7 @@ function Navbar() {
     linka : false
   }
  
+
  const [zaad,setZaad] = useState(initialPayment)
  const [updated, setUpdated] = useState(false)
 
@@ -21,9 +21,11 @@ function Navbar() {
   return (
     <div className='flex items-center justify-between  w-full '>
        <div className='text-white'>
-          <Link to ='/About Me'  className={`text-2xl font-bold`}
+          <Link to ='/About Me'  className={`text-2xl pr-4 font-bold`}
           onClick={()=> setZaad({...initialPayment, about : true})}
           >Abdikadir qulle</Link>
+          
+         
         </div>
       
          <div className={` hidden md:flex space-x-5 hover:cusor-pointer text-[#fff]  `}>

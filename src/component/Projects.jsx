@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from 'react'
+import { toast } from 'react-hot-toast'
+import {BsHandbag} from 'react-icons/bs'
 
 function Projects(prop) {
+
+  const notify = () =>toast.success('Successfully toasted')
+
+
+
   const [data, setData] = useState(false)
   useEffect (() => {
     fetch('https://fakestoreapi.com/products')
@@ -35,6 +42,10 @@ function Projects(prop) {
           </div>
          
         ))} */}
+      </div>
+      <div className="">
+      <button onClick={notify}>{ <BsHandbag />}</button>
+     
       </div>
     
     </div>

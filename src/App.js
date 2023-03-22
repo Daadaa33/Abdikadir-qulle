@@ -7,12 +7,15 @@ import Links from "./component/Links";
 import Footer from "./component/Footer";
 
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
-
+import toast, { Toaster } from 'react-hot-toast';
 function App() {
   
   return (
     <>
     <Router>
+      <Toaster 
+      position="bottom-right"
+      reverseOrder={false}/>
       <Header />
      <div className="max-w-4xl  	 mx-auto ">
       <Routes>

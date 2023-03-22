@@ -15,14 +15,15 @@ function About() {
      </div>
      {/* icons */}
     <div className="">
+        {/* link of social media */}
     <div className=" text-[#1C4B82] flex items-center justify-center text-3xl pb-4 space-x-9 mt-9">
-            {/* <FiInstagram /> */}
-            <BsInstagram className='hover:text-[#D48472]' />
-            <BsLinkedin className='hover:text-[#D48472]' />
-            <BsGithub className='hover:text-[#D48472]' />
-            <BsTwitter className='hover:text-[#D48472]'/>
+                  <a href="https://www.instagram.com/daadaa_33/" target={'_blank'}>{ <BsInstagram className='hover:text-[#D48472]'/>}</a>
+            <a href="https://twitter.com/Daadaa_33" target={'_blank'}>{ <BsTwitter className='hover:text-[#D48472]'/>}</a>
+            <a href="https://www.linkedin.com/in/abdikadir-qulle-5853bb255/" target={'_blank'}>{  <BsLinkedin className='hover:text-[#D48472]' />}</a>
+            <a href="https://github.com/Daadaa33" target={'_blank'}>{  <BsGithub className='hover:text-[#D48472]' />}</a> 
    </div>
    
+    
     </div>
 
     {/* abouut */}
