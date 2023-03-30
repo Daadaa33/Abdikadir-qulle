@@ -9,8 +9,7 @@ function Skills() {
       </div>
       {/* img */}
       <div className="">
-        <img src={daadaa} alt="dada" className='rounded-full 
-        w-[18rem] h-[18rem] border border-[#D48472] border-4' />
+        <img src={daadaa} alt="dada" className='rounded-full w-[18rem] h-[18rem] border border-[#DD6B4D] border-4 ' />
       </div>
       <div className=" text-[#1C4B82] flex items-center justify-center text-3xl pb-4 space-x-9 mt-9">
                     <a href="https://www.instagram.com/daadaa_33/" target={'_blank'}>{ <BsInstagram className='hover:text-[#D48472]'/>}</a>
