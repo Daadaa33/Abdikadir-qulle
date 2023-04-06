@@ -8,14 +8,17 @@ function Projects(prop) {
 
 
 
-  const [data, setData] = useState(false)
+  const [data, setData] = useState([])
+
+  
   useEffect (() => {
-    fetch('https://fakestoreapi.com/products')
+    fetch('https://fakestoreapi.com/products/1')
             .then(res=>res.json())
             .then(json=> setData(json))
   }, [2000])
+  console.log(data);
   return (
-    <div className='bg-white ' >
+    <div className='pt-4 ' >
         {/*  */}
      <div className="flex justify-between items-center bg-gray-300 p-3">
        <h1 className=''>18 products</h1>

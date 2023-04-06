@@ -5,9 +5,12 @@ import Projects from "./component/Projects";
 import Skills from "./component/Skills";
 import Links from "./component/Links";
 import Footer from "./component/Footer";
-
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import toast, { Toaster } from 'react-hot-toast';
+import { createContext } from "react";
+
+export const AppContext = createContext();
+
 function App() {
   
   return (
@@ -17,7 +20,7 @@ function App() {
       position="bottom-right"
       reverseOrder={false}/>
       <Header />
-     <div className="max-w-4xl  	 mx-auto ">
+     <div className="max-w-4xl  	pt-14 mx-auto ">
       <Routes>
         <Route path="/About Me" element={ <About/> } />
         <Route path="/Projects" element={<Projects />} />

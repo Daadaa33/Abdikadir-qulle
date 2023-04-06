@@ -22,8 +22,20 @@ function Skills() {
        and I am always learning something new to add a new skill to the list</p>
    </div>
    {/* skills languages */}
-   <div className="">
-    
+   <div className="flex space-x-3 py-8 gap-4  flex-wrap">
+    <p className='p-3 p-l-3 bg-[#DD6B4D] rounded-sm'>javascript</p>
+    <p className='p-3 bg-[#DD6B4D] rounded-sm'>react js</p>
+    <p className='py-2.5 px-8 bg-[#DD6B4D] rounded-sm'>c</p>
+    <p className='py-2.5 px-8 bg-[#DD6B4D] rounded-sm'>c++</p>
+    <p className='py-2.5 px-8 bg-[#DD6B4D] rounded-sm'>ui/ux</p>
+    <p className='py-2.5 px-8 bg-[#DD6B4D] rounded-sm'>python</p>
+    <p className='p-3 bg-[#DD6B4D] rounded-sm'>c#</p>
+    <p className='p-3 bg-[#DD6B4D] rounded-sm'>photoshop</p>
+    <p className='py-3 px-10 rounded-sm bg-[#DD6B4D]'>java</p>
+    <p className='py-3 px-10 rounded-sm bg-[#DD6B4D]'>php</p>
+    <p className='py-3 px-10 rounded-sm bg-[#DD6B4D]'>mySql</p>
+    <p className='py-3 px-10 rounded-sm bg-[#DD6B4D]'>sql</p>
+    <p className='py-3 px-10 rounded-sm bg-[#DD6B4D]'>vb.net</p>
    </div>
     </div>
   

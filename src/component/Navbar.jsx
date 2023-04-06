@@ -21,7 +21,7 @@ function Navbar() {
   return (
     <div className='flex items-center justify-between  w-full '>
        <div className='text-white'>
-          <Link to ='/About Me'  className={`text-2xl pr-4 font-bold`}
+          <Link to ='/About Me'  className={`text-2xl pr-4 font-[600]`}
           onClick={()=> setZaad({...initialPayment, about : true})}
           >Abdikadir qulle</Link>
           
