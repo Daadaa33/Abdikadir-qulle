@@ -7,32 +7,26 @@ import Links from "./component/Links";
 import Footer from "./component/Footer";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import toast, { Toaster } from 'react-hot-toast';
-import { createContext } from "react";
-
-export const AppContext = createContext();
-
+import dada from "../src/img/dada.jpg"
 function App() {
-  
+
   return (
     <>
-    <Router>
-      <Toaster 
-      position="bottom-right"
-      reverseOrder={false}/>
-      <Header />
-     <div className="max-w-4xl  	pt-14 mx-auto ">
-      <Routes>
-        <Route path="/About Me" element={ <About/> } />
-        <Route path="/Projects" element={<Projects />} />
-        <Route path="/Skills" element={<Skills />} />
-        <Route path="/Links" element={<Links />} />
-      </Routes>
-    </div>
-    <Footer />
-  </Router>
-
+      <Router>
+        <Toaster position="bottom-right" reverseOrder={false} />
+        <Header />
+        <div className=" 	pt-14 ">
+          <Routes>
+            <Route path="/About Me" element={<About />} />
+            <Route path="/Projects" element={<Projects />} />
+            <Route path="/Skills" element={<Skills />} />
+            <Route path="/Links" element={<Links />} />
+          </Routes>
+        </div>
+        <Footer />
+      </Router>
     </>
-    );
+  );
 }
 
 export default App;

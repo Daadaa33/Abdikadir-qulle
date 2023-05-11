@@ -1,58 +1,37 @@
-import React, { useEffect, useState } from 'react'
-import { toast } from 'react-hot-toast'
-import {BsHandbag} from 'react-icons/bs'
+import React, { useEffect, useState } from "react";
+import Product from "./Product";
 
-function Projects(prop) {
+function Projects() {
+  const [data, setData] = useState([]);
 
-  const notify = () =>toast.success('Successfully toasted')
-
-
-
-  const [data, setData] = useState([])
-
-  
-  useEffect (() => {
-    fetch('https://fakestoreapi.com/products/1')
-            .then(res=>res.json())
-            .then(json=> setData(json))
-  }, [2000])
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products")
+      .then((res) => res.json())
+      .then((json) => setData(json));
+  }, []);
   console.log(data);
+
   return (
-    <div className='pt-4 ' >
-        {/*  */}
-     <div className="flex justify-between items-center bg-gray-300 p-3">
-       <h1 className=''>18 products</h1>
-      
-      <div className="">
-        <select className='px-8 py-2 rounded-lg'> 
-          <option>Releeven</option>
-          <option>Name (A-z)</option>
-        </select>
+    <div className="pt-4 mx-w-7xl mx-auto">
+      {/*  */}
+      <div className="flex justify-between items-center bg-gray-300 p-3">
+        <h1 className="">18 products</h1>
+
+        <div className="">
+          <select className="px-8 py-2 rounded-lg">
+            <option>Releeven</option>
+            <option>Name (A-z)</option>
+          </select>
+        </div>
       </div>
-     </div>
-     {/* products */}
-      <div className='flex justify-center items-center flex-wrap'>
-       {/* {data?.map((item,index)=> (
-          <div className="flex flex-wrap justify-center items-center p-5">
-            
-             <div className="flex justify-center    items-center shadow-2xl rounded-lg h-96 w-80  flex-col space-y-3 cursor-pointer hover:drop-shadow-2xl duration-500 transition">
-            <img src={item.image} alt="quule" className='h-60 w-52'/>
-            <div className="flex flex-col justify-center items-center p-2 space-y-6 flex-wrap">
-              <h1 className='text-gray-400'>{item.title}</h1>
-              <p>${item.price}</p>
-            </div>
-          </div>
-          </div>
-         
-        ))} */}
+      {/* products */}
+      <div className="flex justify-start items-center flex-wrap">
+        {data?.map((product) => (
+          <Product key={product.id} {...product} />
+        ))}
       </div>
-      <div className="">
-      <button onClick={notify}>{ <BsHandbag />}</button>
-     
-      </div>
-    
     </div>
-  )
+  );
 }
 
-export default Projects
+export default Projects;
