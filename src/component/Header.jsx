@@ -22,7 +22,7 @@ function Header() {
 
   //
   return (
-    <div className="fixed w-full">
+    <div className="fixed z-50 w-full">
       <div
         className={` flex px-4 justify-between items-center w-[100%] h-[5rem]
      bg-[#1C4B82]`}
@@ -57,7 +57,7 @@ function Header() {
             className={` absolute flex flex-col ${
               data ? "flex" : "hidden"
             } md:hidden
-         top-23 right-0 space-y-10 bg-[#6484A8]  w-full  text-[#E9ECF1] text-center pt-2 text-lg  h-[17rem] rounded-b-[3rem] top-[5rem]`}
+          top-23 right-0 space-y-10 bg-[#6484A8]/90   backdrop-blur-sm w-full  text-[#E9ECF1] text-center pt-2 text-lg  h-[17rem] rounded-b-[3rem] top-[5rem]`}
           >
             <Link to="/About Me" onClick={() => setData(!data)}>
               About Me
