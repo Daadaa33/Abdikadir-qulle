@@ -2,13 +2,47 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import About from './component/About';
+import Projects from './component/Projects';
+import Skills from './component/Skills';
+import Links from './component/Links';
 
-
+const router = createBrowserRouter([
+  {
+    path : "/",
+    element : <App />,
+    children : [
+      {
+        path : "/",
+        element : <About />,
+        index : true
+      },
+      {
+        path :"/about-Me",
+         element :<About />
+      },
+      {
+        path :"/Projects",
+         element :<Projects />
+      },
+      {
+        path :"/Skills",
+         element :<Skills />
+      },
+      {
+        path :"/Links",
+         element :<Links />
+      },
+    ]
+  }
+])
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <div className='bg-[#DAE1E7] '>
-      <App />
+    <RouterProvider router={router}/>
+      {/* <App /> */}
     </div>
     
   </React.StrictMode>

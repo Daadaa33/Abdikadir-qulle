@@ -12,7 +12,7 @@ function Projects() {
   console.log(data);
 
   return (
-    <div className="pt-4 mx-w-7xl mx-auto">
+    <div className="pt-4 max-w-7xl mx-auto">
       {/*  */}
       <div className="flex justify-between items-center bg-gray-300 p-3">
         <h1 className="">18 products</h1>

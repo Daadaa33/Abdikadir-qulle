@@ -37,7 +37,7 @@ function Navbar() {
  
            )
           }
-             <Link to="/" onClick={()=> setZaad({...initialPayment, about : true})}
+             <Link to="/about-Me" onClick={()=> setZaad({...initialPayment, about : true})}
              className={` ${zaad.about && 'font-bold'}`}
              >About Me</Link>
             <Link to="/Projects" onClick={()=> setZaad({...initialPayment, project : true})}
