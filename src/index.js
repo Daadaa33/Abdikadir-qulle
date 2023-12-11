@@ -1,51 +1,52 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import About from './component/About';
-import Projects from './component/Projects';
-import Skills from './component/Skills';
-import Links from './component/Links';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import About from "./component/About";
+import Projects from "./component/Projects";
+import Skills from "./component/Skills";
+import Links from "./component/Links";
+import { AuthProvider } from "./context/Context";
 
 const router = createBrowserRouter([
   {
-    path : "/",
-    element : <App />,
-    errorElement : <h1>Error 404 Not Found</h1>,
-    children : [
+    path: "/",
+    element: <App />,
+    errorElement: <h1>Error 404 Not Found</h1>,
+    children: [
       {
-        path : "/",
-        element : <About />,
-        index : true
+        path: "/",
+        element: <About />,
+        index: true,
       },
       {
-        path :"/about-Me",
-         element :<About />
+        path: "/about-Me",
+        element: <About />,
       },
       {
-        path :"/Projects",
-         element :<Projects />
+        path: "/Projects",
+        element: <Projects />,
       },
       {
-        path :"/Skills",
-         element :<Skills />
+        path: "/Skills",
+        element: <Skills />,
       },
       {
-        path :"/Links",
-         element :<Links />
+        path: "/Links",
+        element: <Links />,
       },
-    ]
-  }
-])
-const root = ReactDOM.createRoot(document.getElementById('root'));
+    ],
+  },
+]);
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <div className='bg-[#DAE1E7] '>
-    <RouterProvider router={router}/>
-      {/* <App /> */}
-    </div>
-    
+    <AuthProvider>
+      <div>
+        <RouterProvider router={router} />
+      </div>
+    </AuthProvider>
   </React.StrictMode>
 );
 

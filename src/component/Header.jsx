@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import {AiOutlineMenu} from "react-icons/ai"
-import {BsMoonFill, BsSun} from "react-icons/bs"
-import {MdClose} from 'react-icons/md'
-import { Link } from 'react-router-dom'
-import Navbar from './Navbar'
+import React, { useEffect, useState } from "react";
+import { AiOutlineMenu } from "react-icons/ai";
+import { BsMoonFill, BsSun } from "react-icons/bs";
+import { MdClose } from "react-icons/md";
+import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
+import { useAuth } from "../context/Context";
 
 function Header() {
   const initialPayment = {
@@ -15,12 +16,12 @@ function Header() {
   const [data, setData] = useState(false);
   //
   const [updated, setUpdated] = useState(false);
-
+  const { theme, setTheme } = useAuth();
   useEffect(() => {}, [updated]);
 
-  const [age, setAge] = useState(false);
+  const [dark, setAge] = useState(false);
 
-  //
+  console.log(theme);
   return (
     <div className="fixed pt-0 z-50 w-full">
       <div
@@ -33,15 +34,19 @@ function Header() {
         </div>
         {/* mobile */}
         <div className="md:hidden hover:cursor-pointer text-white flex items-center  justify-center gap-6  text-bold">
-          {age ? (
+          {dark ? (
             <BsMoonFill
-              onClick={() => setAge(!age)}
+              onClick={() => {
+                // setAge(!dark), setTheme("dark");
+              }}
               className=" hover:rotate-180 duration-700 cursor-pointer w-5 h-5 "
             />
           ) : (
             <BsSun
-              onClick={() => setAge(!age)}
-              className=" hover:rotate-180 duration-700 cursor-pointer w-6 h-6"
+              onClick={() => {
+                // setAge(!dark), setTheme("light");
+              }}
+              className="hover:rotate-180 duration-700 cursor-pointer w-6 h-6"
             />
           )}
 
@@ -49,7 +54,9 @@ function Header() {
             <MdClose onClick={() => setData(!data)} className=" w-9 h-9" />
           ) : (
             <AiOutlineMenu
-              onClick={() => setData(!data)}
+              onClick={() => {
+                setData(!data);
+              }}
               className=" w-7 h-7"
             />
           )}
@@ -78,4 +85,4 @@ function Header() {
   );
 }
 
-export default Header
+export default Header;

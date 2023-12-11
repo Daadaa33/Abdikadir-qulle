@@ -1,11 +1,13 @@
-import React from 'react'
-import {BsGithub,BsInstagram, BsLinkedin, BsTwitter} from "react-icons/bs"
+import React from "react";
+import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 
 function Links() {
   return (
     <div className="flex flex-col max-w-4xl mx-auto items-center space-y-4 pt-16 ">
       <div className="">
-        <h1 className="font-bold text-[#082032] text-5xl">Links</h1>
+        <h1 className="font-bold text-[#082032] text-5xl dark:text-white">
+          Links
+        </h1>
       </div>
       {/* links of social media */}
       <div className="">
@@ -67,4 +69,4 @@ function Links() {
   );
 }
 
-export default Links
+export default Links;

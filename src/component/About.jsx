@@ -1,14 +1,13 @@
-import React, { useState } from 'react'
-import dada from '../img/znd.jpg'
-import {BsGithub,BsInstagram, BsLinkedin, BsTwitter} from "react-icons/bs"
+import React, { useState } from "react";
+import dada from "../img/znd.jpg";
+import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 
 function About() {
-  
   return (
     <div
-      className={`h-[50rem] mx-w-4xl mx-auto h-full pb-4 max-w-4xl mx-auto  flex flex-col space-y-5 items-center pt-[4rem]`}
+      className={` mx-w-4xl mx-auto h-full pb-4 max-w-4xl   flex flex-col space-y-5 items-center pt-[4rem]`}
     >
-      <div className="text-center text-5xl text-[#082032] font-bold">
+      <div className="text-center dark:text-white text-5xl text-[#082032] font-bold">
         <h1>Welcome!</h1>
       </div>
       {/* profile */}
@@ -16,7 +15,7 @@ function About() {
         <img
           src={dada}
           alt="daadaa"
-          className="rounded-full w-[18rem] h-[18rem] border border-[#DD6B4D] border-4 "
+          className="rounded-full w-[18rem] h-[18rem]  border-[#DD6B4D] border-4 "
         />
       </div>
       {/* icons */}
@@ -44,13 +43,13 @@ function About() {
       {/* abouut */}
       <div className="sm:max-w-lg  w-auto sm:text-center max-w-sm md:max-w-2xl lg:max-w-none space-y-4 text-left md:text-center px-4">
         <div className="">
-          <h1 className="text-center ">
+          <h1 className="text-center  dark:text-white">
             I am a frontend developer, software engineering student and content
             creator from somalia based in somalia, kismayo.
           </h1>
         </div>
         <div className=" ">
-          <h1 className='text-center'>
+          <h1 className="text-center dark:text-white">
             In 2020 I was a graphic designer and I wanted to learn a new skill
             so I decided to learn web development. I wasn't able to be
             consistent until 2022, that's when I started with my bachelors
@@ -62,4 +61,4 @@ function About() {
   );
 }
 
-export default About
+export default About;
